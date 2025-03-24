@@ -39,12 +39,10 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-      - name: Deploy
-        run:  git config --global user.email "joao.campos.y@example.com" \
-          && git config --global user.name "João Campos" \ 
-          && yarn deploy
+      # - name: Deploy
+      #   run:  yarn deploy
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
